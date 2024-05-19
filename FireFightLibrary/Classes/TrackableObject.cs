@@ -28,14 +28,6 @@ namespace FireFight.Classes
         public uint Xpos { get; set; }
         public uint Ypos { get; set; }
         public uint Sidereference { get; set; }  // 0 is terrain if needed
-        public Image ObjectControl { get; set; }
-
-        public void CreateUnit(Grid GridToAdd)
-        {
-            ObjectControl.Margin = new Thickness(Xpos, Ypos, 0, 0);
-
-            GridToAdd.Children.Add(ObjectControl);
-        }
 
         public GeneralFunctions.CardinalDirectionsSquare Facing { get; set; }
 
