@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/FireFightLibrary/.vs
+/FireFightLibrary/bin/Debug/net8.0
+/FireFightLibrary/obj
