@@ -1,4 +1,5 @@
-﻿using FireFight.Functions;
+﻿using FireFight.CharacterObjects;
+using FireFight.Functions;
 using System;
 using System.Collections.Generic;
 using System.Data;
