@@ -72,8 +72,6 @@ namespace FirefightUnitTests
                 {
                     damres = Char1.FireFunction();
                 } while (damres == null);
-
-                //  Char1.DoAction(ActionsPossible.FireSingle);
             }
             catch (Exception ex)
             {
