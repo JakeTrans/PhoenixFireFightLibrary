@@ -1,6 +1,5 @@
 ﻿using FireFight.CharacterObjects;
 using FireFight.Classes;
-using NuGet.Frameworks;
 
 namespace FirefightUnitTests
 {
