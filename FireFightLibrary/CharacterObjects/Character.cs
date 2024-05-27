@@ -41,7 +41,7 @@ namespace FireFight.CharacterObjects
         /// Constructor for new character generation
         /// </summary>
         /// <param name="guncombatskill"></param>
-        public Character(int guncombatskill, uint MapScale) : base(0, 0, 0, "survivor-idle_rifle_0", 0)// since for generation scale does not matter
+        public Character(int guncombatskill, uint sideReferenceNumber) : base(0, 0, sideReferenceNumber)// since for generation scale does not matter
         {
             DicerollFunctions Dice = new DicerollFunctions();
             Strength = Dice.ThreeD6();
@@ -69,7 +69,7 @@ namespace FireFight.CharacterObjects
         /// <param name="StartingYPosition">Y Position</param>
         /// <param name="sideReferenceNumber">Side Character is on</param>
         public Character(string name, int StrengthValue, int IntelligenceValue, int WillValue, int HealthValue, int AgilityValue, int GunCombatSkillValue, uint StartingXPosition, uint StartingYPosition, uint sideReferenceNumber, uint Scale) :
-            base(StartingXPosition, StartingXPosition, sideReferenceNumber, "survivor-idle_rifle_0", Scale)
+            base(StartingXPosition, StartingYPosition, sideReferenceNumber)
         {
             Name = name;
             DBFunctions DBfunct = new DBFunctions();

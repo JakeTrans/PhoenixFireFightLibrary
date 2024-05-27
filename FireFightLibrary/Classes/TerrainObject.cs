@@ -12,7 +12,7 @@ namespace FireFight.Classes
         public bool BlockSight { get; set; }
         public uint MovePenalty { get; set; }
 
-        public TerrainObject(uint xpos, uint ypos, string Assetname, uint Scale) : base(xpos, ypos, 0, Assetname, Scale)
+        public TerrainObject(uint xpos, uint ypos, string Assetname) : base(xpos, ypos, 0)
         {
         }
     }

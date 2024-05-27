@@ -14,7 +14,7 @@ namespace FireFight.Classes
 
         public Actions ActionsForTurn;
 
-        public TrackableObject(uint xpos, uint ypos, uint sidereference, string Assetname, uint Scale)
+        public TrackableObject(uint xpos, uint ypos, uint sidereference)
         {
             Xpos = xpos;
             Ypos = ypos;
