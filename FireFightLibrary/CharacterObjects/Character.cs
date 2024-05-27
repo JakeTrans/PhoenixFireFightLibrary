@@ -350,10 +350,10 @@ namespace FireFight.CharacterObjects
             Ypos = Convert.ToUInt32(Ypos + ChangeinY);
         }
 
-        private void FireFunction()
+        public DamageResult FireFunction()
         {
             FiringFunc firef = new FiringFunc();
-            firef.FireSingle(this, CurrentAimAmount, 0, GetEquippedWeapon(), MapScale);
+            return firef.FireSingle(this, CurrentAimAmount, 0, GetEquippedWeapon(), MapScale);
         }
 
         public bool KnockoutRoll()
