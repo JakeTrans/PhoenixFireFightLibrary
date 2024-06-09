@@ -14,7 +14,7 @@ namespace FireFight.Functions
         {
             get
             {
-                return Path.GetDirectoryName(Assembly.GetAssembly(GetType()).Location) + @"\Data\";
+                return System.IO.Directory.GetCurrentDirectory() + @"\Data\";
             }
         }
 
