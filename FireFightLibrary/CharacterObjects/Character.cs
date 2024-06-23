@@ -170,42 +170,34 @@ namespace FireFight.CharacterObjects
             switch (DirectionToMove)
             {
                 case GeneralFunctions.CardinalDirectionsSquare.North:
-                    // Movefunction(0, -10);
                     ActionsForTurn.ActionsTaken.Add(ActionsPossible.MoveN);
                     break;
 
                 case GeneralFunctions.CardinalDirectionsSquare.NorthEast:
-                    // Movefunction(10, -10);
                     ActionsForTurn.ActionsTaken.Add(ActionsPossible.MoveNE);
                     break;
 
                 case GeneralFunctions.CardinalDirectionsSquare.East:
-                    // Movefunction(10, 0);
                     ActionsForTurn.ActionsTaken.Add(ActionsPossible.MoveE);
                     break;
 
                 case GeneralFunctions.CardinalDirectionsSquare.SouthEast:
-                    // Movefunction(10, 10);
                     ActionsForTurn.ActionsTaken.Add(ActionsPossible.MoveSE);
                     break;
 
                 case GeneralFunctions.CardinalDirectionsSquare.South:
-                    // Movefunction(0, 10);
                     ActionsForTurn.ActionsTaken.Add(ActionsPossible.MoveS);
                     break;
 
                 case GeneralFunctions.CardinalDirectionsSquare.SouthWest:
-                    // Movefunction(-10, 10);
                     ActionsForTurn.ActionsTaken.Add(ActionsPossible.MoveSW);
                     break;
 
                 case GeneralFunctions.CardinalDirectionsSquare.West:
-                    // Movefunction(-10, 0);
                     ActionsForTurn.ActionsTaken.Add(ActionsPossible.MoveW);
                     break;
 
                 case GeneralFunctions.CardinalDirectionsSquare.NorthWest:
-                    // Movefunction(-10, -10);
                     ActionsForTurn.ActionsTaken.Add(ActionsPossible.MoveNW);
                     break;
 
@@ -312,7 +304,7 @@ namespace FireFight.CharacterObjects
                     break;
 
                 case ActionsPossible.FireSingle:
-                    FireFunction();
+                    DamageResult DamRes = FireFunction();
                     break;
             }
         }
