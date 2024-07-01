@@ -25,33 +25,33 @@ namespace FireFight.Classes
 
         public GeneralFunctions.CardinalDirectionsSquare Facing { get; set; }
 
-        public uint GetRotation() // System  to assume all character models face east and rotation is clockwise
+        public uint GetRotation() // System  to assume all character models face north and rotation is clockwise
         {
             switch (Facing)
             {
                 case GeneralFunctions.CardinalDirectionsSquare.North:
-                    return 270;
-
-                case GeneralFunctions.CardinalDirectionsSquare.NorthEast:
-                    return 315;
-
-                case GeneralFunctions.CardinalDirectionsSquare.East:
                     return 0;
 
-                case GeneralFunctions.CardinalDirectionsSquare.SouthEast:
+                case GeneralFunctions.CardinalDirectionsSquare.NorthEast:
                     return 45;
 
-                case GeneralFunctions.CardinalDirectionsSquare.South:
+                case GeneralFunctions.CardinalDirectionsSquare.East:
                     return 90;
 
-                case GeneralFunctions.CardinalDirectionsSquare.SouthWest:
+                case GeneralFunctions.CardinalDirectionsSquare.SouthEast:
                     return 135;
 
-                case GeneralFunctions.CardinalDirectionsSquare.West:
+                case GeneralFunctions.CardinalDirectionsSquare.South:
                     return 180;
 
-                case GeneralFunctions.CardinalDirectionsSquare.NorthWest:
+                case GeneralFunctions.CardinalDirectionsSquare.SouthWest:
                     return 225;
+
+                case GeneralFunctions.CardinalDirectionsSquare.West:
+                    return 270;
+
+                case GeneralFunctions.CardinalDirectionsSquare.NorthWest:
+                    return 315;
 
                 default:
                     throw new NotImplementedException("Direction not recogised--" + Facing.ToString());

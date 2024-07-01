@@ -1,6 +1,7 @@
 ﻿using FireFight.Classes;
 using FireFight.Functions;
 using System.Data;
+using System.Net.Http.Headers;
 using static FireFight.Classes.Firing;
 
 namespace FireFight.CharacterObjects
@@ -248,11 +249,12 @@ namespace FireFight.CharacterObjects
             }
         }
 
-        public void DoAction(ActionsPossible Actposs)
+        public DamageResult DoAction(ActionsPossible Actposs)
         {
+            DamageResult DamRes = null;
             if (KnockedOut == true)
             {
-                return;
+                return DamRes;
             }
 
             switch (Actposs)
@@ -304,8 +306,17 @@ namespace FireFight.CharacterObjects
                     break;
 
                 case ActionsPossible.FireSingle:
-                    DamageResult DamRes = FireFunction();
+                    DamRes = FireFunction();
+
                     break;
+            }
+            if (DamRes != null)
+            {
+                return DamRes;
+            }
+            else
+            {
+                return null;
             }
         }
 
