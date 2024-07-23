@@ -76,33 +76,41 @@ namespace FireFight.Functions
         {
             return radians * 180 / Math.PI;
         }
-    }
 
-    // Example usage
+        // Function to check if the target is within the arc
 
-    internal class Program
+        public static bool IsTargetWithinArc(float sourceRotation, float targetBearing, float arcWidth)
 
-    {
-        /// <summary>
-        /// Force round up to int - there may be a better way but I don;t care right now
-        /// </summary>
-        /// <param name="numbertoRound"></param>
-        /// <returns></returns>
-        public static uint RoundUp(double numbertoRound)
         {
-            string[] splitnumber = numbertoRound.ToString().Split('.');
-            if (splitnumber.Length == 1)
+            // Normalize source rotation and target bearing to be within 0 to 360 degrees
+
+            sourceRotation = NormalizeAngle(sourceRotation);
+
+            targetBearing = NormalizeAngle(targetBearing);
+
+            // Calculate the difference and normalize it to -180 to 180
+
+            float difference = NormalizeAngle(targetBearing - sourceRotation);
+
+            // Check if the target is within the arc
+
+            return Math.Abs(difference) <= arcWidth / 2;
+        }
+
+        // Helper function to normalize angles to be within 0 to 360 degrees
+
+        private static float NormalizeAngle(float angle)
+
+        {
+            angle = angle % 360;
+
+            if (angle < 0)
+
             {
-                return Convert.ToUInt32(splitnumber);
+                angle += 360;
             }
-            else if (Convert.ToUInt32(splitnumber[1].Substring(0, 8)) > 0)
-            {
-                return Convert.ToUInt32(splitnumber[0]) + 1;
-            }
-            else
-            {
-                return Convert.ToUInt32(splitnumber[1]) + 1;
-            }
+
+            return angle;
         }
     }
 }
