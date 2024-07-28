@@ -1,4 +1,5 @@
 ﻿using FireFight.Classes;
+using System;
 
 namespace FireFight.Functions
 {
@@ -84,33 +85,72 @@ namespace FireFight.Functions
         {
             // Normalize source rotation and target bearing to be within 0 to 360 degrees
 
-            sourceRotation = NormalizeAngle(sourceRotation);
+            // sourceRotation = NormalizeAngle(sourceRotation);
 
-            targetBearing = NormalizeAngle(targetBearing);
+            // targetBearing = NormalizeAngle(targetBearing);
 
-            // Calculate the difference and normalize it to -180 to 180
+            float perside = arcWidth / 2;
 
-            float difference = NormalizeAngle(targetBearing - sourceRotation);
+            //right-side
 
-            // Check if the target is within the arc
+            float rightside = sourceRotation + perside;
 
-            return Math.Abs(difference) <= arcWidth / 2;
+            if (targetBearing >= sourceRotation && targetBearing <= rightside)
+            {
+                Console.WriteLine("Inbetween Right Side Arc 1");
+                return true;
+            }
+
+            //left side plus
+            if (rightside > 360)
+            {
+                float RightNormalized = rightside += 360;
+
+                if (RightNormalized >= targetBearing)
+                {
+                    Console.WriteLine("Inbetween right Side Arc 2");
+                    return true;
+                }
+            }
+
+            //left-side
+            float leftside = sourceRotation - perside;
+
+            if (targetBearing <= sourceRotation && targetBearing >= leftside)
+            {
+                Console.WriteLine("Inbetween Left Side Arc 1");
+                return true;
+            }
+
+            //left side minus
+            if (leftside < 0)
+            {
+                float LeftNormalized = leftside += 360;
+
+                if (LeftNormalized <= targetBearing)
+                {
+                    Console.WriteLine("Inbetween Left Side Arc 2");
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         // Helper function to normalize angles to be within 0 to 360 degrees
 
-        private static float NormalizeAngle(float angle)
+        //private static float NormalizeAngle(float angle)
 
-        {
-            angle = angle % 360;
+        //{
+        //    angle = angle % 360;
 
-            if (angle < 0)
+        //    if (angle < 0)
 
-            {
-                angle += 360;
-            }
+        //    {
+        //        angle += 360;
+        //    }
 
-            return angle;
-        }
+        //    return angle;
+        //}
     }
 }
