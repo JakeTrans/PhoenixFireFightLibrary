@@ -1,6 +1,5 @@
 ﻿using FireFight.CharacterObjects;
 using FireFight.Classes;
-using static Azure.Core.HttpHeader;
 
 namespace FirefightUnitTests
 {

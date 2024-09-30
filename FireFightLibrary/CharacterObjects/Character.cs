@@ -1,7 +1,6 @@
 ﻿using FireFight.Classes;
 using FireFight.Functions;
 using System.Data;
-using System.Net.Http.Headers;
 using static FireFight.Classes.Firing;
 
 namespace FireFight.CharacterObjects

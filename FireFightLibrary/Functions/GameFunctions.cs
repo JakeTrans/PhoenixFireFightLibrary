@@ -1,5 +1,4 @@
 ﻿using FireFight.Classes;
-using System;
 
 namespace FireFight.Functions
 {
