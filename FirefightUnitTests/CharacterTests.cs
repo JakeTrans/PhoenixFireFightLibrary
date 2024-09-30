@@ -100,5 +100,39 @@ namespace FirefightUnitTests
                 Assert.Fail(ex.Message);
             }
         }
+
+        [TestMethod]
+        public void ImpulseMaxTest()
+        {
+            try
+            {
+                Character Char = new Character(7, 0);
+
+                Impulses impulsedata = new Impulses();
+
+                for (int i = 0; i < 21; i++)
+                {
+                    Char.ActionsForTurn.ActionsTaken.Add(ActionsPossible.Aim);
+                }
+
+                impulsedata.AddActionsToImpulse(Char);
+
+                Debug.Print("List 1 Count: " + impulsedata.ImpulseList1.Count.ToString());
+                Debug.Print("List 2 Count: " + impulsedata.ImpulseList2.Count.ToString());
+                Debug.Print("List 3 Count: " + impulsedata.ImpulseList3.Count.ToString());
+                Debug.Print("List 4 Count: " + impulsedata.ImpulseList4.Count.ToString());
+
+                Assert.AreEqual(impulsedata.ImpulseList1.Count, 6);
+                Assert.AreEqual(impulsedata.ImpulseList2.Count, 5);
+                Assert.AreEqual(impulsedata.ImpulseList3.Count, 5);
+                Assert.AreEqual(impulsedata.ImpulseList4.Count, 5);
+
+                impulsedata.SortAllImpulseListByINTSkill();
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
     }
 }
