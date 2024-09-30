@@ -42,31 +42,39 @@ namespace FireFightLibrary.Classes
             ImpulseList4 = new List<Impulse>();
         }
 
-        public static void SortImpulseListByINTSkill(List<Impulse> impulseList)
+        public void SortImpulseListByINTSkill(List<Impulse> impulseList)
         {
             impulseList.Sort((x, y) => x.Character.INTSkillFactor.CompareTo(y.Character.INTSkillFactor));
+        }
+
+        public void SortAllImpulseListByINTSkill()
+        {
+            SortImpulseListByINTSkill(ImpulseList1);
+            SortImpulseListByINTSkill(ImpulseList2);
+            SortImpulseListByINTSkill(ImpulseList3);
+            SortImpulseListByINTSkill(ImpulseList4);
         }
 
         public void AddActionsToImpulse(Character Char)
         {
             DBFunctions DBfunct = new DBFunctions();
-            DataTable DT = DBfunct.RunSQLStatementDT(DBfunct.DataTableConnection, ("SELECT * From tblCombatActionsPerImpulse WHERE [Combat Actions] = " + Char.CombatAction));
+            DataTable DT = DBfunct.RunSQLStatementDT(DBfunct.DataTableConnection, ("SELECT * From tblCombatActionsPerImpulse WHERE [Combat Actions] = " + Char.ActionsForTurn.ActionsTaken.Count()));
             // work though the numbers
             for (int i = 0; i < Char.ActionsForTurn.ActionsTaken.Count(); i++)
             {
-                if (i + 1 <= Convert.ToInt32(DT.Columns["1"].ToString()))
+                if (ImpulseList1.Count() < Convert.ToInt32(DT.Rows[0]["1"].ToString()))
                 {
                     ImpulseList1.Add(new Impulse(Char, Char.ActionsForTurn.ActionsTaken[i]));
                 }
-                else if ((i + 1) + Convert.ToInt32(DT.Columns["1"].ToString()) <= Convert.ToInt32(DT.Columns["2"].ToString()))
+                else if (ImpulseList2.Count() < Convert.ToInt32(DT.Rows[0]["2"].ToString()))
                 {
                     ImpulseList2.Add(new Impulse(Char, Char.ActionsForTurn.ActionsTaken[i]));
                 }
-                else if ((i + 1) + Convert.ToInt32(DT.Columns["1"].ToString()) + Convert.ToInt32(DT.Columns["2"].ToString()) <= Convert.ToInt32(DT.Columns["3"].ToString()))
+                else if (ImpulseList3.Count() < Convert.ToInt32(DT.Rows[0]["3"].ToString()))
                 {
                     ImpulseList3.Add(new Impulse(Char, Char.ActionsForTurn.ActionsTaken[i]));
                 }
-                else if ((i + 1) + Convert.ToInt32(DT.Columns["1"].ToString()) + Convert.ToInt32(DT.Columns["2"].ToString()) + Convert.ToInt32(DT.Columns["2"].ToString()) <= Convert.ToInt32(DT.Columns["4"].ToString()))
+                else if (ImpulseList4.Count() < Convert.ToInt32(DT.Rows[0]["4"].ToString()))
                 {
                     ImpulseList4.Add(new Impulse(Char, Char.ActionsForTurn.ActionsTaken[i]));
                 }
