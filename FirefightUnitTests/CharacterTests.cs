@@ -134,5 +134,37 @@ namespace FirefightUnitTests
                 Assert.Fail(ex.Message);
             }
         }
+
+        [TestMethod]
+        public void ImpulseTwoCharactersTest()
+        {
+            try
+            {
+                Character Char = new Character(7, 0);
+                Character Char2 = new Character(7, 0);
+                Impulses impulsedata = new Impulses();
+                Char.Name = "1";
+                Char2.Name = "2";
+
+                for (int i = 0; i < 1; i++)
+                {
+                    Char.ActionsForTurn.ActionsTaken.Add(ActionsPossible.Aim);
+                }
+                for (int i = 0; i < 1; i++)
+                {
+                    Char2.ActionsForTurn.ActionsTaken.Add(ActionsPossible.MoveE);
+                }
+
+                impulsedata.AddActionsToImpulse(Char);
+
+                impulsedata.AddActionsToImpulse(Char2);
+
+                impulsedata.SortAllImpulseListByINTSkill();
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+        }
     }
 }

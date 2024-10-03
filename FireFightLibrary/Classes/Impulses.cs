@@ -62,19 +62,19 @@ namespace FireFightLibrary.Classes
             // work though the numbers
             for (int i = 0; i < Char.ActionsForTurn.ActionsTaken.Count(); i++)
             {
-                if (ImpulseList1.Count() < Convert.ToInt32(DT.Rows[0]["1"].ToString()))
+                if (ImpulseList1.Where(x => x.Character.Name == Char.Name).Count() < Convert.ToInt32(DT.Rows[0]["1"].ToString()))
                 {
                     ImpulseList1.Add(new Impulse(Char, Char.ActionsForTurn.ActionsTaken[i]));
                 }
-                else if (ImpulseList2.Count() < Convert.ToInt32(DT.Rows[0]["2"].ToString()))
+                else if (ImpulseList2.Where(x => x.Character.Name == Char.Name).Count() < Convert.ToInt32(DT.Rows[0]["2"].ToString()))
                 {
                     ImpulseList2.Add(new Impulse(Char, Char.ActionsForTurn.ActionsTaken[i]));
                 }
-                else if (ImpulseList3.Count() < Convert.ToInt32(DT.Rows[0]["3"].ToString()))
+                else if (ImpulseList3.Where(x => x.Character.Name == Char.Name).Count() < Convert.ToInt32(DT.Rows[0]["3"].ToString()))
                 {
                     ImpulseList3.Add(new Impulse(Char, Char.ActionsForTurn.ActionsTaken[i]));
                 }
-                else if (ImpulseList4.Count() < Convert.ToInt32(DT.Rows[0]["4"].ToString()))
+                else if (ImpulseList4.Where(x => x.Character.Name == Char.Name).Count() < Convert.ToInt32(DT.Rows[0]["4"].ToString()))
                 {
                     ImpulseList4.Add(new Impulse(Char, Char.ActionsForTurn.ActionsTaken[i]));
                 }
