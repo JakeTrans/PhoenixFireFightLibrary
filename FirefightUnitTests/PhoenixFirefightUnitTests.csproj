@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FireFightLibrary\FireFightLibrary.csproj" />
+    <ProjectReference Include="..\FireFightLibrary\PhoenixFireFightLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FireFightLibrary", "FireFightLibrary.csproj", "{573C4EE0-DF7B-4ED4-941F-19F2C3217954}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoenixFireFightLibrary", "PhoenixFireFightLibrary.csproj", "{573C4EE0-DF7B-4ED4-941F-19F2C3217954}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirefightUnitTests", "..\FirefightUnitTests\FirefightUnitTests.csproj", "{4158826B-E333-472C-B19F-01ACACE2A869}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoenixFirefightUnitTests", "..\FirefightUnitTests\PhoenixFirefightUnitTests.csproj", "{4158826B-E333-472C-B19F-01ACACE2A869}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
