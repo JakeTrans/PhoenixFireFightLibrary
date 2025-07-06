@@ -1,7 +1,7 @@
-﻿using FireFight.CharacterObjects;
+﻿using PhoenixFireFight.CharacterObjects;
 using System.Diagnostics;
 
-namespace FireFight.Classes
+namespace PhoenixFireFight.Classes
 {
     public class Scenario
     {

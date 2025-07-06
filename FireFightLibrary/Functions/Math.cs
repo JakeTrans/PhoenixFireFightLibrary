@@ -1,4 +1,4 @@
-﻿namespace FireFight.Functions
+﻿namespace PhoenixFireFight.Functions
 {
     public class MathFunc
     {

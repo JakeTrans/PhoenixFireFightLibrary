@@ -1,9 +1,9 @@
-﻿using FireFight.CharacterObjects;
-using FireFight.Classes;
-using FireFightLibrary.Classes;
+﻿using PhoenixFireFight.CharacterObjects;
+using PhoenixFireFight.Classes;
+using PhoenixFireFightLibrary.Classes;
 using System.Diagnostics;
 
-namespace FirefightUnitTests
+namespace PhoenixFireFightUnitTests
 {
     [TestClass]
     public class CharacterTests

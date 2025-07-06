@@ -1,9 +1,9 @@
-﻿using FireFight.CharacterObjects;
-using FireFight.Classes;
-using FireFight.Functions;
+﻿using PhoenixFireFight.CharacterObjects;
+using PhoenixFireFight.Classes;
+using PhoenixFireFight.Functions;
 using System.Data;
 
-namespace FireFightLibrary.Classes
+namespace PhoenixFireFightLibrary.Classes
 {
     public class Impulse
     {

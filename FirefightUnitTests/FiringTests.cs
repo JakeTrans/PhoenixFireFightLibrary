@@ -1,7 +1,7 @@
-﻿using FireFight.CharacterObjects;
-using FireFight.Classes;
+﻿using PhoenixFireFight.CharacterObjects;
+using PhoenixFireFight.Classes;
 
-namespace FirefightUnitTests
+namespace PhoenixFireFightUnitTests
 {
     [TestClass]
     public class FiringTests

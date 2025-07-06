@@ -1,7 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Data;
 
-namespace FireFight.Functions
+namespace PhoenixFireFight.Functions
 {
     public class DBFunctions
     {

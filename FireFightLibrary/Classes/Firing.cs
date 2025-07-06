@@ -1,10 +1,10 @@
-﻿using FireFight.CharacterObjects;
-using FireFight.Functions;
+﻿using PhoenixFireFight.CharacterObjects;
+using PhoenixFireFight.Functions;
 using System.Data;
 using System.Diagnostics;
-using static FireFight.Functions.GameFunctions;
+using static PhoenixFireFight.Functions.GameFunctions;
 
-namespace FireFight.Classes
+namespace PhoenixFireFight.Classes
 {
     internal class Firing
     {

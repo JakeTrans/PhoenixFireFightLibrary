@@ -1,6 +1,6 @@
-using FireFight.Functions;
+using PhoenixFireFight.Functions;
 
-namespace FirefightUnitTests
+namespace PhoenixFireFightUnitTests
 {
     [TestClass]
     public class DBTests

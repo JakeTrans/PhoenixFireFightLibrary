@@ -1,4 +1,4 @@
-﻿namespace FireFight.CharacterObjects
+﻿namespace PhoenixFireFight.CharacterObjects
 {
     public class Ammo
     {

@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace FireFight.Classes
+namespace PhoenixFireFight.Classes
 {
     public class DamageResult
     {

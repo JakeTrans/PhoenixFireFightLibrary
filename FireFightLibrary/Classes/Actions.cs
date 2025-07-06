@@ -1,4 +1,4 @@
-﻿namespace FireFight.Classes
+﻿namespace PhoenixFireFight.Classes
 {
     public enum ActionsPossible
     {

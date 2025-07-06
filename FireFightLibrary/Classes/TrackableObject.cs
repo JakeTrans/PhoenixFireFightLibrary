@@ -1,6 +1,6 @@
-﻿using FireFight.Functions;
+﻿using PhoenixFireFight.Functions;
 
-namespace FireFight.Classes
+namespace PhoenixFireFight.Classes
 {
     public abstract class TrackableObject
     {

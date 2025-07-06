@@ -1,7 +1,7 @@
-﻿using FireFight.Functions;
+﻿using PhoenixFireFight.Functions;
 using System.Data;
 
-namespace FireFight.Classes
+namespace PhoenixFireFight.Classes
 {
     public enum WeaponType
     {

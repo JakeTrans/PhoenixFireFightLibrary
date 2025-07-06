@@ -1,6 +1,6 @@
-﻿using FireFight.Classes;
+﻿using PhoenixFireFight.Classes;
 
-namespace FireFight.Functions
+namespace PhoenixFireFight.Functions
 {
     public static class GameFunctions
     {

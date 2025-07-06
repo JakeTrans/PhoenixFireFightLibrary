@@ -1,9 +1,9 @@
-﻿using FireFight.Classes;
-using FireFight.Functions;
+﻿using PhoenixFireFight.Classes;
+using PhoenixFireFight.Functions;
 using System.Data;
-using static FireFight.Classes.Firing;
+using static PhoenixFireFight.Classes.Firing;
 
-namespace FireFight.CharacterObjects
+namespace PhoenixFireFight.CharacterObjects
 {
     public class Character : TrackableObject
     {
